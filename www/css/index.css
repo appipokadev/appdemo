@@ -1,0 +1,99 @@
+body {
+	overflow-x:hidden;
+	-webkit-text-size-adjust:none;
+	font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color:#000;
+	font-size:14px;
+	display:-webkit-box;
+	background: #FFFF;
+    /* We want to layout our first container vertically */
+    -webkit-box-orient: vertical;
+    /* we want our child elements to stretch to fit the container */
+	-webkit-box-align:stretch;
+} /* General styles that apply to elements not contained within other classes and styles */
+
+.tableMsgs {
+border-collapse: collapse; 
+font-size:12px;
+color:#333333;width:100%;border-width: px;border-color: #ebebeb;}
+.tableMsgs th {font-size:12px;background-color:#ebebeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #ebebeb;text-align:left;}
+.tableMsgs tr {background-color: rgba(255, 255, 255, 1);margin-bottom:13px !important;float: left;width: 100%; }
+.tableMsgs td {
+	font-size:12px;
+	padding: 8px;
+	border-color: #ebebeb;
+	margin-bottom:10px !important;
+	border-style: solid;
+	border-width: 1px !important; 
+	width: 8000px !important;
+}
+
+
+input[type="text"]:not(.selectbox), input[type="number"], input[type="search"], input[type="tel"], input[type="email"],
+input[type="password"] {
+  -webkit-user-modify: read-write-plaintext-only;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  outline-style: none;
+}
+
+textarea{
+  -webkit-user-modify: read-write-plaintext-only;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  outline-style: none;
+}
+.tableTransparent {
+	background: transparent;
+}
+
+.botaoLogin {
+	width: 100%; height: 33px;box-shadow:none !important;
+	border-radius: 0 !important;
+	border-color:#FFF !important;
+	border-width: 1px;
+	background-color:#311708 !important;
+	color:#FFF !important;
+	text-shadow:none !important;
+}
+
+.tableContato {
+	width:100%;
+	background-color:#FFF;
+	border-color:#ebebeb;
+	border-width:1px;
+	border-style:solid;
+}
+
+.tableContato td{
+	text-align:center;
+	border-bottom:solid;
+	border-width:1px;
+	border-color:#ebebeb;
+	height:67px;
+}
+
+.botaoContato {
+	width: 100%; height: 33px;box-shadow:none !important;
+	border-radius: 0 !important;
+	border-color:#FFF !important;
+	border-width: 1px;
+	background-color:rgba(49,23,8,0.9) !important;
+	color:#FFF !important;
+	text-shadow:none !important;
+	margin-top:-10px !important;
+}
+
+.botaoVisImagem{
+	width: 60px; height: 25px;box-shadow:none !important;
+	border-radius: 0 !important;
+	border-color:#FFF !important;
+	border-width: 1px;
+	background-color:rgba(255,255,255,0.3) !important;
+	color:#FFF !important;
+	text-shadow:none !important;
+	margin-top:10px !important;
+	position:absolute;
+	border-radius:5px !important;
+	padding-top:4px;
+	padding-left:4px;
+	z-index:20001;
+}

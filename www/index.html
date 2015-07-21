@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <link rel="shortcut icon" href="img/logo.png">
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script type="text/javascript" charset="utf-8" src="js/plataforma.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/md5.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/log.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/database.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/obj_getxmlhttp.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/login.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="js/signup.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/perfil.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/mensagem.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/mensagem_enviar.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/contato.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/sobre.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/mural.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/imagem.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/informacoes.js"></script>
+	<script type="text/javascript" charset="utf-8" src="plugins/com.phonegap.plugin.statusbar/www/statusbar.js"></script>
+	
+	<script>  
+        (function() {
+    if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement("style");
+        msViewportStyle.appendChild(
+            document.createTextNode("@-ms-viewport{width:auto!important}")
+        );
+        document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+    }
+	})();
+	</script>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" type="text/css" href="css/icons.css" />    
+ 
+      
+     <link rel="stylesheet" type="text/css" href="css/af.ui.css" title="default" />
+  
+      <link rel="stylesheet" type="text/css" href="css/main.css"  />
+      <link rel="stylesheet" type="text/css" href="css/appframework.css"  />
+      <link rel="stylesheet" type="text/css" href="css/lists.css"  />
+      <link rel="stylesheet" type="text/css" href="css/forms.css"  />
+      <link rel="stylesheet" type="text/css" href="css/buttons.css"  />        
+      <link rel="stylesheet" type="text/css" href="css/badges.css"  />        
+      <link rel="stylesheet" type="text/css" href="css/grid.css"  />
+
+      <link rel="stylesheet" type="text/css" href="css/android.css"  />
+      <link rel="stylesheet" type="text/css" href="css/win8.css"  />
+      <link rel="stylesheet" type="text/css" href="css/bb.css"  />
+      <link rel="stylesheet" type="text/css" href="css/ios.css"  />
+      <link rel="stylesheet" type="text/css" href="css/ios7.css"  />
+      <link rel="stylesheet" type="text/css" href="css/tizen.css"  />
+        
+      <link rel="stylesheet" type="text/css" href="plugins/css/af.actionsheet.css"  />
+      <link rel="stylesheet" type="text/css" href="plugins/css/af.popup.css"  />
+      <link rel="stylesheet" type="text/css" href="plugins/css/af.scroller.css"  />
+      <link rel="stylesheet" type="text/css" href="plugins/css/af.selectBox.css"  />        
+        
+        <!-- uncomment for intel.xdk apps 
+        <script type="text/javascript" charset="utf-8" src="intelxdk.js"></script>
+        <script type="text/javascript" charset="utf-8" src="xhr.js"></script>
+        -->
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./appframework.js"></script>
+		<script type="text/javascript" charset="utf-8" src="./plugins/af.scroller.js"></script>       
+        <!-- include af.desktopBrowsers.js on desktop browsers only -->
+
+		<!-- JS para o recurso de push -->
+		<script type="text/javascript" charset="utf-8" src="js/push/PushNotification.js"></script>
+		<script type="text/javascript" charset="utf-8" src="js/push/config_push.js"></script>
+		
+		<script>
+
+            function loadedPanel(what) {
+                //We are going to set the badge as the number of li elements inside the target
+                $.ui.updateBadge("#aflink", $("#af").find("li").length);
+            }
+
+
+            function unloadedPanel(what) {
+                console.log("unloaded " + what.id);
+            }
+
+            if (!((window.DocumentTouch && document instanceof DocumentTouch) || 'ontouchstart' in window)) {
+                var script = document.createElement("script");
+                script.src = "plugins/af.desktopBrowsers.js";
+                var tag = $("head").append(script);
+                //$.os.desktop=true;
+            }
+
+          //  $.feat.nativeTouchScroll=true;
+          
+        </script>        
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.actionsheet.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.css3animate.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.passwordBox.js"></script>          
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.scroller.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.selectBox.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.touchEvents.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.touchLayer.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.popup.js"></script>
+
+        <script type="text/javascript" charset="utf-8" src="./ui/appframework.ui.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/fade.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/flip.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/pop.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/slide.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/slideDown.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/slideUp.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.slidemenu.js"></script>
+        	
+	<script>f_Iniciar(); </script>
+</head>
+
+<body onresize="f_ResizeWindow();" style="background-color:#311708" onload="f_ResizeWindow()">
+  <div id="black" style="width:100%;z-index:20000;position:fixed; visibility:hidden; top:0px !important">
+	<a id="btnVis" class="button botaoVisImagem">Concluir</a>
+	<table id="tbImg" style="position:fixed; width:100%;z-index:20000">
+		<tr>
+		  <td style="text-align:center">
+		     <img id="imgVis" style="max-width:100%; width:auto; height:auto;">
+		  </td>
+		</tr>
+	</table>
+	<img  style="width:100%; height:100%; opacity:1" src="img/black.png" > 
+  </div>
+  
+ <div id="afui" style="opacity: 0">    
+	
+    <div id="content" > 
+	   
+		<!--Menu lateral-->
+		<nav style="visibility: hidden">
+			<ul class="list" id='lista' style="visibility:visibility;">
+				<!-- está na função index.js -> f_GetMenu() -->
+			</ul>
+		</nav>
+		
+        <!--Mensagem de carregando-->
+		<div id="afui_mask" class="ui-loader" style="z-index: 20000; display: block; visibility: hidden"><span class="ui-icon ui-icon-loading spin"></span>
+			<strong id="msgCarregando" > </strong>
+		</div>
+		<!--Pergunta-->
+		<div name="msgPergunta" id="afui_mask" class="ui-msg" style="z-index: 20000; display: block; visibility: hidden">
+			<strong id="msgPergunta" width="100%"></strong><br>
+			<table width="100%">
+			  <tr><td><a class="button red" id="btnSim" href="#" onclick="f_MsgPerguntaSim();">Sim</a></td> <td align="right"><a class="button green" href="#" onclick="f_OcultaMsg();">N&atilde;o</a></td> </tr>
+			</table>
+		</div>
+  	 <!--Telas-->
+        <div class="panel" scrolling='no' title="" id="pgLogin"  data-footer="none" style="background-color:#311708;">
+            
+		   <table id="tbLogin" style="width:100%">
+		    <tr><td align="center">     </td></tr>	
+			
+			<tr><td valign="center">    <form style="margin-top:-25px">
+				<input id="email" type="email" onfocus="f_ResetCor(this)" placeholder="E-mail" onkeypress="f_KeyLogin(event.keyCode)" style="border-radius: 0 !important;" >
+				<input id="senha" type="password" placeholder="Senha" onkeypress="f_KeyLogin(event.keyCode)" style="border-radius: 0 !important;">
+			</form> 
+			<a id="btnEntrar" class="botaoLogin button" style="" onclick="f_Entrar()">Acessar agora</a>
+			<br><strong id="msg" class="msg" style="color: #FFF"></strong>
+			  
+			</td></tr>	
+	
+			<tr>
+				<td align="center" valign="bottom">
+					<table style="width:100%; height:100%">
+					<tr>
+					<td valign="bottom" align="left"><a id="btnEntrar" class="botaoLogin button" style="height:33px; width:136px; font:inherit" onclick="f_MostrarJanelaCadastro()">Cadastre-se</a> </td>
+					<td valign="bottom" align="right"><a id="btnEntrar" class="botaoLogin button" style="height:33px; width:136px; font:inherit" onclick="f_RecuperarSenha()">Recuperar senha</a></td> 
+				    </tr>
+					</table>
+			    <td>
+			</tr>	
+			
+			</table>
+	
+            
+        </div>
+        	
+		<div class="panel" title="Mensagem" id="pgVerMensagem" >
+			
+            <header>
+				<script>f_BotaoVoltar('', "f_SetBotaoMensagens(false)");</script>
+                <h1  style="width:100%; left:0px; font-size:18px">Detalhe</h1>
+            </header>
+	        <table id="tblMsg" width="100%" height="100%"> 
+            <tr> 
+			 <td valign="top" style="height:100%; padding-left: 10px; padding-right: 10px">
+			     
+				    <div style="text-align:center"><h2 id="tituloMsg" style="text-align: center; display:inline; width:100%"></h2></div>
+			
+			     <div id="corpoMsg" style="position:relative"></div>
+			 </td>
+			
+			</tr>
+			<tr>
+			  <td valign="bottom">
+			  <div style="width:100%;text-align: center;"><strong id="msgResp" style="visibility: hidden;">Resposta enviada!</strong></div>
+			   <div id="divResposta" style="visibility:hidden; text-align:center">
+				 <strong id="msgAvisoResp" style="visibility: hidden;">Digite a resposta!</strong>
+					<div class="input-group">
+					  <div style="width: 100%; display: table;">
+							<div style="display: table-row">
+								<div style="width: 100%; display: table-cell;"> 
+								
+								  <textarea id="msgResposta" type="textarea" rows="2" placeholder="Resposta" class="">
+							      </textarea>
+								</div>
+								
+								<div style="display: table-cell;vertical-align: top;">
+								  <img id="imgBotao" src="img/reply.png" style="width: 32px; height: 32px;" onclick="f_EnviarResposta()" >
+								</div>
+							</div>
+						</div> 
+						
+						</div>
+					</form>
+  			  </div>
+			  </td>
+			</tr>
+			</table>
+        </div>
+		
+        <div class="panel" title="Agenda" id="pgInativo" >
+            <header>
+            	<script>f_BotaoVoltar('Voltar', '');</script>
+                <h1 style="width:100%; left:0px"><script>document.write(f_GetTituloAPP());</script><br></h1>
+            </header>
+			<br>
+            <b><p>Por que estou vendo esta mensagem?</p></b><br>
+			O seu acesso ainda n&atilde;o foi aprovado. Em breve voc&ecirc; receber&aacute; um email confirmando os seus dados.
+        </div>
+        
+        <div class="panel" title="Créditos" id="pgSobre" scrolling='no'>
+            <header>
+				<script>f_BotaoMenu();</script>
+                <h1>Créditos</h1>
+            </header>
+            <br>
+			<br>
+            <table id="tabCreditos" border="0" style="width: 100%;" cellspacing="0px">
+            	<tr >
+					<td width="10px" height="100%" valign="center" align="center"><img id = "imgSobre" src=""><br>
+					Visite nosso site <b onclick="f_AbrirSite('http://www.appipoka.com');">appipoka.com</b><br>
+					
+					<div style="margin-top:10px" onclick="window.open('tel:99330305', '_system')">Ligue <b>(46) 9933-0305</b> </div>
+					<div style="margin-top:10px">contato@appipoka.com </div>
+					</td>
+					
+				</tr>
+            </table>
+        </div>
+		
+        <div class="panel" title="Cardápio" id="pgMural">
+            <header>
+				<script>f_BotaoMenu();</script>
+                <h1>Cardápio</h1>
+            </header>
+            <br>
+            <strong id="muralTexto"> </strong>
+			<br><br>
+			<div style="width:100%; text-align:center">
+			<img id="muralImg" style="max-width:100%; width:auto; height:auto" onclick="f_VisualizarImagem(this.src)">
+			</div>
+        </div>
+		
+		
+        <div class="panel" title="Mensagens" id="pgMensagens" data-tab="tab3" selected="true" style="background-color:#F2F2F2">
+            <script>
+				var myScroller;
+				f_Slider();
+			</script>
+			<header id="cabecalhoMsgs">
+            	<script>f_BotaoMenu();</script>
+                <h1>Mensagens</h1>
+            </header>
+			<div style="width:100%; height:15px" align="center"><img  id="imgSincronizando" style="visibility:visible; width:30px; height:30px" src="img/loading.gif"></div>
+           
+			<table id="tblMensagens" class="tableMsgs">
+			  
+			</table>
+			<div id='msgNenhuma' style="text-align:center;width:100%"><p>Nenhuma mensagem</p></div>
+        </div>
+        
+ 		<div class="panel" title="Sobre" id="" data-tab="tab3">
+            <header>
+            	<script>f_BotaoMenu();</script>
+                <h1>Mensagens</h1>
+            </header>
+            <p>Mensagens do sistema</p>
+        </div>
+        
+        <div class="panel" title="Cadastro" id="pgCadastro" data-tab="tabcadastro" scrolling='no'>
+            <header>
+				<script>f_BotaoVoltar("Voltar", "f_SetHeader(false);f_LimparFormularioCadastro()");</script>
+                <h1>Cadastro</h1>
+            </header>
+            <div id="divCad">
+				<br>
+				<input id="cadNome" type="text" placeholder="Nome completo" onfocus="f_ResetCor(this)" >
+				<input id="cadTelefone" type="tel" placeholder="Telefone" onfocus="f_ResetCor(this)" >
+				<input id="cadEmail" type="email" placeholder="E-mail" onfocus="f_ResetCor(this)" >
+				<input id="cadSenha" type="password" placeholder="Senha" onfocus="f_ResetCor(this)" >
+				<br>
+				<a id="btnCadastrar" class="button icon add botaoContato" style="width: 100%; height: 40px; margin-top:10px !important" onclick="f_CadastrarUsuario()">Cadastrar</a>
+				<br><strong id="msg" class="msg"></strong>
+				<div id="divMsgCadastro" style="visibility: hidden">
+			   <br><strong id="msgCad">Cadastro realizado com sucesso! </strong>       
+				</div>
+			</div>
+			
+        </div>
+		
+		<div class="panel" title="Alterar senha" id="pgAltSenha" data-tab="tabaltsenha" scrolling='no'>
+            <header>
+			    <script>f_BotaoMenu();</script>
+                <h1>Alterar senha</h1>
+            </header>
+            <div id="divCad">
+				<br>
+				<input id="SenhaAtual" type="password" placeholder="Senha atual" onfocus="f_ResetCor(this)" >
+				<input id="SenhaNova" type="password" placeholder="Nova senha" onfocus="f_ResetCor(this)" >
+				<input id="SenhaConfirm" type="password" placeholder="Confirma&ccedil;&atilde;o de senha" onfocus="f_ResetCor(this)" >
+				<br>
+				<a id="btnCadastrar" class="button icon check botaoContato" style="width: 100%; height: 40px; margin-top:10px !important" onclick="f_AlterarSenha()">Alterar</a>
+				<br><strong id="msg" class="msg"></strong>
+			</div>
+        </div>
+		<div class="panel" title="Enviar Mensagem" id="pgEnvio"  >
+            <header>
+			    <script>f_BotaoMenu();</script>
+                <h1>Enviar Mensagem</h1>
+            </header>
+            <div id="divEnvMsg">
+				<br>
+				<input id="titMsg" type="text" placeholder="Título da mensagem" onfocus="f_ResetCor(this)" >
+				<table style="width:100%">
+					<tr>
+						<div class="input-group">
+					  <div style="width: 100%; display: table;">
+							<div style="display: table-row">
+								<div style="width: 100%; display: table-cell; font:inherit"><textarea style="margin-left:-10px" id="msgCorpo" type="textarea" rows="2" placeholder="Mensagem" class=""></textarea></div><div style="display: table-cell;vertical-align: top;">
+								  <img src='img/galeria.png' style="width:30px; height:30px" onclick="app.choosePicture();"><br>
+								  <img src='img/camera.png' style="width:30px; height:30px" onclick="app.takePicture();">
+								</div>
+							</div>
+						</div> 
+						
+						</div>
+		
+					</tr>
+				</table>
+				<table style="width:100%">
+				 <tr>
+				   <td style="width:100%; text-align:center"><img id="imgMsg" src="" style="width:50px; height:50px; visibility:hidden" onclick="f_VisualizarImagem(this.src)"></td>
+				 </tr>
+				</table>
+				<a id="btnEnviarMsg" class="button icon check botaoContato" style="width: 100%; height: 40px" onclick="f_EnviarMensagem()">Enviar</a>
+				<br><strong id="msg" class="msg"></strong>
+			</div>
+        </div>
+		
+		<div class="panel" title="Contato" id="pgContato" style="background-color:#F2F2F2" >
+            <header>
+			    <script>f_BotaoMenu();</script>
+                <h1>Contato</h1>
+            </header>
+            
+            <div id="divCad">
+				<br>
+
+				
+				<table class="tableContato">
+				 <tr> <td id="inf_fb"  onclick="f_AbrirSite('https://www.fb.com/appipoka')">Visite nossa página no <strong>Facebook</strong></td>  </tr>
+				 <tr> <td id="inf_tel" ><strong> </strong> </td>  </tr>
+				 <tr> <td id="inf_end" onclick="window.open('http://maps.apple.com/maps?q=-25.7419510602,-53.0564997244', '_system')" style="border-bottom:none; ">Venha nos visitar <strong>Dois Vizinhos, Rua do comércio</strong> </td>  </tr>
+				 <tr>
+				   <td style="border-bottom:none; padding-top:-20px; padding-left:6px; padding-right:5px">
+					   <textarea id="msgContato" type="textarea" rows="5" placeholder="Envie um recado para nós" class=""></textarea>
+				
+					<a id="btnCadastrar" class="button icon check botaoContato" style="width: 100%; height: 40px" onclick="f_EnviarMensagemContato()">Enviar</a>
+					<br><strong id="msg" class="msg"></strong>
+				   <td>
+				 </tr>
+				</table>
+				<br>
+				
+			
+				
+			
+			</div>
+        </div>
+		
+    
+	</div>
+    <!--Rodapé-->
+      <div id="navbar" style="visibility: visible; opacity:1">
+	  </div>
+</div>
+</body>
+</html>    
