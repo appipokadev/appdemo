@@ -20,7 +20,7 @@ Pré requisitos para utilizar esta JS:
 // configurações a serem definidas para funcionar o push
 var urlPlayStore	= "https://play.google.com/store/apps/details?id=com.appipoka.appdemo";
 var urlAppleStore	= "";
-var senderID		= "206198615485"; // id do aplicativo no console google
+var senderID		= "804351814152"; // id do aplicativo no console google
 var callBackMsg		= null; // função que será chamada quando receber um push. obs(não setar aqui)
 /*
 	exemplo:
